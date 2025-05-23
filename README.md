@@ -1,0 +1,48 @@
+# CUDA Setup Script
+
+Simple CUDA version switcher.
+
+## What it does
+
+- Finds all CUDA versions on your system
+- Lets you pick one
+- Sets it up immediately 
+- Adds to venv if you're in one
+
+## Usage
+
+One-liner:
+```bash
+curl -s https://raw.githubusercontent.com/JaLnYn/cuda-selector/main/cuda-selector.sh | bash
+```
+
+Or download and run:
+```bash
+wget https://raw.githubusercontent.com/JaLnYn/cuda-selector/main/cuda-selector.sh
+chmod +x cuda-selector.sh
+./cuda-selector.sh
+```
+
+Pick your version:
+```
+Found CUDA installations:
+   1. cuda-12.4 (/usr/local/cuda-12.4)
+   2. cuda-12.6 (/usr/local/cuda-12.6)
+   3. cuda (/usr/local/cuda)
+
+Enter the number of your choice: 2
+```
+
+CUDA 12.6 is now active.
+
+## Requirements
+
+- CUDA installed in `/usr/local/cuda-*`
+- Bash shell
+
+## Verify it worked
+
+```bash
+nvcc --version
+nvidia-smi
+```
