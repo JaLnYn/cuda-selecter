@@ -15,6 +15,7 @@ One-liner:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/JaLnYn/cuda-selecter/main/cuda-selecter.sh)
 ```
+Note: if you use this method, you may have to paste the export commands manually into your shell
 
 Or download and run:
 ```bash

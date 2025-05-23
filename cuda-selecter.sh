@@ -27,10 +27,11 @@ set_cuda_env() {
     export CUDA_HOME="$cuda_path"
     export PATH="$cuda_path/bin:$PATH"
     export LD_LIBRARY_PATH="$cuda_path/lib64:$LD_LIBRARY_PATH"
-    echo "✅ CUDA environment variables set for current session:"
-    echo "   CUDA_HOME=$CUDA_HOME"
-    echo "   PATH updated to include $cuda_path/bin"
-    echo "   LD_LIBRARY_PATH updated to include $cuda_path/lib64"
+	echo ""
+    echo "Paste these commands into your shell:"
+    echo "export CUDA_HOME=\"$cuda_path\""
+    echo "export PATH=\"$cuda_path/bin:\$PATH\""
+    echo "export LD_LIBRARY_PATH=\"$cuda_path/lib64:\$LD_LIBRARY_PATH\""
 }
 
 # Function to add CUDA to virtual environment
@@ -135,4 +136,3 @@ fi
 echo ""
 echo "🔧 Verify installation:"
 echo "   nvcc --version"
-echo "   nvidia-smi"
