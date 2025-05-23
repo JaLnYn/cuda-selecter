@@ -110,8 +110,7 @@ if [[ ! -d "$selected_cuda/bin" ]]; then
     exit 1
 fi
 
- Set CUDA environment variables for current session
-set_cuda_env "$selected_cuda"
+# Set CUDA environment variables for current session
 
 # Check if we're in a virtual environment
 if [[ -n "$VIRTUAL_ENV" ]]; then
@@ -133,6 +132,4 @@ else
     echo "   To make permanent, add the export commands to your ~/.bashrc or ~/.zshrc"
 fi
 
-echo ""
-echo "🔧 Verify installation:"
-echo "   nvcc --version"
+set_cuda_env "$selected_cuda"
