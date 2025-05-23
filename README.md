@@ -13,14 +13,14 @@ Simple CUDA version switcher.
 
 One-liner:
 ```bash
-curl -s https://raw.githubusercontent.com/JaLnYn/cuda-selector/main/cuda-selector.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/JaLnYn/cuda-selecter/main/cuda-selecter.sh)
 ```
 
 Or download and run:
 ```bash
-wget https://raw.githubusercontent.com/JaLnYn/cuda-selector/main/cuda-selector.sh
-chmod +x cuda-selector.sh
-./cuda-selector.sh
+wget https://raw.githubusercontent.com/JaLnYn/cuda-selecter/main/cuda-selecter.sh
+chmod +x cuda-selecter.sh
+./cuda-selecter.sh
 ```
 
 Pick your version:

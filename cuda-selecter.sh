@@ -39,7 +39,7 @@ add_cuda_to_venv() {
     local activate_script="$VIRTUAL_ENV/bin/activate"
     
     # Check if CUDA config already exists
-    if grep -q "### cuda-version-script" "$activate_script"; then
+    if grep -q "### cuda-selecter" "$activate_script"; then
         echo "⚠️  CUDA configuration already exists in virtual environment."
         echo "   Remove existing configuration manually if you want to change versions."
         return 1
@@ -51,12 +51,12 @@ add_cuda_to_venv() {
     # Add CUDA environment variables to the activate script
     cat >> "$activate_script" << EOF
 
-### cuda-version-script
+### cuda-selecter
 # CUDA Environment Variables
 export CUDA_HOME="$cuda_path"
 export PATH="$cuda_path/bin:\$PATH"
 export LD_LIBRARY_PATH="$cuda_path/lib64:\$LD_LIBRARY_PATH"
-### cuda-version-script
+### cuda-selecter
 EOF
     
     echo "✅ CUDA configuration added to virtual environment."
@@ -109,7 +109,7 @@ if [[ ! -d "$selected_cuda/bin" ]]; then
     exit 1
 fi
 
-# Set CUDA environment variables for current session
+ Set CUDA environment variables for current session
 set_cuda_env "$selected_cuda"
 
 # Check if we're in a virtual environment
