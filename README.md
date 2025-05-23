@@ -35,14 +35,11 @@ Enter the number of your choice: 2
 
 CUDA 12.6 is now active.
 
+Config has also been added to your activate script in your virtual environment. 
+
 ## Requirements
 
 - CUDA installed in `/usr/local/cuda-*`
 - Bash shell
 
-## Verify it worked
 
-```bash
-nvcc --version
-nvidia-smi
-```
